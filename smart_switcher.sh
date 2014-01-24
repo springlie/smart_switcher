@@ -3,12 +3,12 @@
 
 function do_clear ()
 {
-	command unalias unalias >/dev/null 2>&1
-	unalias clear >/dev/null 2>&1
-	unalias source >/dev/null 2>&1
-	unalias echo >/dev/null 2>&1
-	unalias export >/dev/null 2>&1
-	unalias unset >/dev/null 2>&1
+	command unalias unalias &>/dev/null
+	unalias clear	&>/dev/null
+	unalias source	&>/dev/null
+	unalias echo	&>/dev/null
+	unalias export	&>/dev/null
+	unalias unset	&>/dev/null
 	clear
 }
 
@@ -65,13 +65,13 @@ function main ()
 
 	# set LAN env
 
-	PROXY_SERVER_IP="172.17.18.80"	# your proxy ip
-    PROXY_SERVER_PORT="8080"		# your prxoy port
-    PROXY_GATE=${PROXY_SERVER_IP}:${PROXY_SERVER_PORT}
+	local PROXY_SERVER_IP="172.17.18.84"	# your proxy ip
+    local PROXY_SERVER_PORT="8080"		# your prxoy port
+    local PROXY_GATE=${PROXY_SERVER_IP}:${PROXY_SERVER_PORT}
 
 	# set path
 
-	CUR_DIR='/tmp/smartswitcher'
+	local CUR_DIR='/tmp/smartswitcher'
 
 
 	# routine
@@ -94,15 +94,15 @@ function main ()
 
 		# for ssh protocol proxy
 
-		GIT_PROXY_SSH=$CUR_DIR"/proxy4ssh."$$
-		PROXY_SSH_STR='/usr/bin/connect -H '$PROXY_GATE' "$@"'
+		local GIT_PROXY_SSH=$CUR_DIR"/proxy4ssh."$$
+		local PROXY_SSH_STR='/usr/bin/connect -H '$PROXY_GATE' "$@"'
 		echo $PROXY_SSH_STR > $GIT_PROXY_SSH
 		chmod +x $GIT_PROXY_SSH
 
 		# for git protocol prxoy
 
-		GIT_PROXY_WRAP=$CUR_DIR"/proxywrapper."$$
-		GIT_PROXY_STR='ssh -o ProxyCommand="'$GIT_PROXY_SSH' %h %p" "$@"'
+		local GIT_PROXY_WRAP=$CUR_DIR"/proxywrapper."$$
+		local GIT_PROXY_STR='ssh -o ProxyCommand="'$GIT_PROXY_SSH' %h %p" "$@"'
 		echo $GIT_PROXY_STR > $GIT_PROXY_WRAP
 		chmod +x $GIT_PROXY_WRAP
 
