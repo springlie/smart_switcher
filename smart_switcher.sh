@@ -94,17 +94,23 @@ function main ()
 
 		# for ssh protocol proxy
 
-		local GIT_PROXY_SSH=$CUR_DIR"/proxy4ssh."$$
-		local PROXY_SSH_STR='/usr/bin/connect -H '$PROXY_GATE' "$@"'
-		echo $PROXY_SSH_STR > $GIT_PROXY_SSH
-		chmod +x $GIT_PROXY_SSH
+		local GIT_PROXY_SSH=$CUR_DIR"/proxy4ssh."$(id -u)
+		if [ ! -e $GIT_PROXY_SSH ]
+		then
+			local PROXY_SSH_STR='/usr/bin/connect -H '$PROXY_GATE' "$@"'
+			echo $PROXY_SSH_STR > $GIT_PROXY_SSH
+			chmod 700 $GIT_PROXY_SSH
+		fi
 
 		# for git protocol prxoy
 
-		local GIT_PROXY_WRAP=$CUR_DIR"/proxywrapper."$$
-		local GIT_PROXY_STR='ssh -o ProxyCommand="'$GIT_PROXY_SSH' %h %p" "$@"'
-		echo $GIT_PROXY_STR > $GIT_PROXY_WRAP
-		chmod +x $GIT_PROXY_WRAP
+		local GIT_PROXY_WRAP=$CUR_DIR"/proxywrapper."$(id -u)
+		if [ ! -e $GIT_PROXY_WRAP ]
+		then
+			local GIT_PROXY_STR='ssh -o ProxyCommand="'$GIT_PROXY_SSH' %h %p" "$@"'
+			echo $GIT_PROXY_STR > $GIT_PROXY_WRAP
+			chmod 700 $GIT_PROXY_WRAP
+		fi
 
 		# install
 
