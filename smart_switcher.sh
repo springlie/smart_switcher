@@ -94,7 +94,8 @@ function main ()
 
 		# for ssh protocol proxy
 
-		local GIT_PROXY_SSH=$CUR_DIR"/proxy4ssh."$(id -u)
+		#local GIT_PROXY_SSH=$CUR_DIR"/proxy4ssh."$(id -u)
+		local GIT_PROXY_SSH=$CUR_DIR"/proxy4ssh"
 		if [ ! -e $GIT_PROXY_SSH ]
 		then
 			local PROXY_SSH_STR='/usr/bin/connect -H '$PROXY_GATE' "$@"'
@@ -104,7 +105,8 @@ function main ()
 
 		# for git protocol prxoy
 
-		local GIT_PROXY_WRAP=$CUR_DIR"/proxywrapper."$(id -u)
+		#local GIT_PROXY_WRAP=$CUR_DIR"/proxywrapper."$(id -u)
+		local GIT_PROXY_WRAP=$CUR_DIR"/proxywrapper"
 		if [ ! -e $GIT_PROXY_WRAP ]
 		then
 			local GIT_PROXY_STR='ssh -o ProxyCommand="'$GIT_PROXY_SSH' %h %p" "$@"'
