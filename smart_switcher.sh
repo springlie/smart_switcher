@@ -81,7 +81,7 @@ function main ()
 
 	# am I in LAN now ?
 
-    ping -c1 -W1 -w1 $PROXY_SERVER_IP &> /dev/null
+    ping -c1 -W1 $PROXY_SERVER_IP &> /dev/null
     if [ $? -eq 0 ]
     then
 
