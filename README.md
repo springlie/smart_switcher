@@ -10,7 +10,7 @@ A **smart** proxy switcher wrapper, supports **http**, **https**, **ftp**, **rsy
 
 If you usually switch the network environment (maybe home with no-proxy and workplace with proxy), it may help you a lot.
 
-Tested in [**zsh**](http://www.zsh.org/) and [**Bash**](http://www.gnu.org/software/bash/).
+Tested in [**Zsh**](http://www.zsh.org/) and [**Bash**](http://www.gnu.org/software/bash/).
 
 ## Screenshot ##
 
