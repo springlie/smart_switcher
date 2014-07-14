@@ -30,4 +30,4 @@ Normally, it antomatically executes when you login in.
 
 `smart_switcher` supports [**cecho**](https://github.com/springlie/cecho), who will bring you some colors.
 
-[**connect**](https://bitbucket.org/gotoh/connect/src/) is required if proxy is supported in **ssh** and **git**. You can install it easily in path `/usr/bin/connect`.
+[**connect**](https://bitbucket.org/gotoh/connect/src/) [bin download here](https://raw.github.com/springlie/smart_switcher/master/connect)is required if proxy is supported in **ssh** and **git**. You can install it easily in path `/usr/bin/connect`.
