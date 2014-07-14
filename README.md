@@ -10,7 +10,7 @@ A **smart** proxy switcher wrapper, supports **http**, **https**, **ftp**, **rsy
 
 If you usually switch the network environment (maybe home with no-proxy and workplace with proxy), it may help you a lot.
 
-Tested in [zsh](http://www.zsh.org/) and [bash](http://www.gnu.org/software/bash/).
+Tested in [**Zsh**](http://www.zsh.org/) and [**Bash**](http://www.gnu.org/software/bash/).
 
 ## Screenshot ##
 
@@ -28,6 +28,6 @@ Simply source it in your .zshrc, or any shell script resource file like this:
 
 Normally, it antomatically executes when you login in.
 
-`smart_switcher` supports [cecho](https://github.com/springlie/cecho), who will bring some colors for you.
+`smart_switcher` supports [**cecho**](https://github.com/springlie/cecho), who will bring you some colors.
 
 [**connect**](https://bitbucket.org/gotoh/connect/src/) is required if proxy is supported in **ssh** and **git**. You can install it easily in path `/usr/bin/connect`.
