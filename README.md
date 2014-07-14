@@ -6,7 +6,7 @@ A auto-detect proxy switcher fot http, https, ftp, rsync, ssh, git protocols.
 
 ## Overview ##
 
-A **smart** proxy switcher wrapper, supports **http**, **https**, **ftp**, **rsync**, **ssh**([connect](https://bitbucket.org/gotoh/connect/src/) depanded), **git**([connect](https://bitbucket.org/gotoh/connect/src/) depanded) protocols. It can automatically detect your network environment and set proxy for you.
+A **smart** proxy switcher wrapper, supports **http**, **https**, **ftp**, **rsync**, **ssh**([**connect**](https://bitbucket.org/gotoh/connect/src/) depended), **git**([**connect**](https://bitbucket.org/gotoh/connect/src/) depended) protocols. It can automatically detect your network environment and set proxy for you.
 
 If you usually switch the network environment (maybe home with no-proxy and workplace with proxy), it may help you a lot.
 
@@ -30,4 +30,4 @@ Normally, it antomatically executes when you login in.
 
 `smart_switcher` supports [cecho](https://github.com/springlie/cecho), who will bring some colors for you.
 
-[connect](https://bitbucket.org/gotoh/connect/src/) is required if proxy is supported in **ssh** and **git**. You can install it easily in path `/usr/bin/connect`.
+[**connect**](https://bitbucket.org/gotoh/connect/src/) is required if proxy is supported in **ssh** and **git**. You can install it easily in path `/usr/bin/connect`.
