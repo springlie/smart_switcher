@@ -88,7 +88,7 @@ function main ()
 		local GIT_PROXY_SSH=$CUR_DIR"/proxy4ssh"
 		if [ ! -e $GIT_PROXY_SSH ]
 		then
-			local PROXY_SSH_STR='/usr/bin/connect -H '$PROXY_GATE' "$@"'
+			local PROXY_SSH_STR='connect -H '$PROXY_GATE' "$@"'
 			echo $PROXY_SSH_STR > $GIT_PROXY_SSH
 			chmod 700 $GIT_PROXY_SSH
 		fi
