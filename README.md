@@ -40,14 +40,14 @@ Normally, it antomatically executes when you login in.
 
 #### installation ####
 
-1. ensure proxy be set temply for installation :) 
+ensure proxy be set temply for installation :) 
+
 	`export http_proxy={YOUR_PROXY_GATEWARY_IP}:{YOUR_PROXY_GATEWAY_PORT}`
 
-2.
-	- [**for MAC user only**]
+- [**for MAC user only**]
 
-		brew install connect
+	brew install connect
 
-	- [**for general user**]
+- [**for general user**]
 
-		download the source, make and install it easily in system path
+	download the source, make and install it easily in system path
