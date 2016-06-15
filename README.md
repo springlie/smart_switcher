@@ -38,8 +38,6 @@ Normally, it antomatically executes when you login in.
 
 [**connect**](https://bitbucket.org/gotoh/connect/src/) is required if proxy is supported in **ssh** and **git**. 
 
-#### installation ####
-
 ensure proxy be set temply for installation :) 
 
 	`export http_proxy={YOUR_PROXY_GATEWARY_IP}:{YOUR_PROXY_GATEWAY_PORT}`
