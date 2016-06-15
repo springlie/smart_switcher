@@ -30,17 +30,17 @@ Normally, it antomatically executes when you login in.
 
 ## What's more ##
 
-### cecho ###
+#### cecho ####
 
 `smart_switcher` supports [**cecho**](https://github.com/springlie/cecho), who will bring you some colors.
 
-### connect ###
+#### connect ####
 
 [**connect**](https://bitbucket.org/gotoh/connect/src/) is required if proxy is supported in **ssh** and **git**. 
 
 ensure proxy be set temply for installation :) 
 
-	`export http_proxy={YOUR_PROXY_GATEWARY_IP}:{YOUR_PROXY_GATEWAY_PORT}`
+`export http_proxy={YOUR_PROXY_GATEWARY_IP}:{YOUR_PROXY_GATEWAY_PORT}`
 
 - [**for MAC user only**]
 
