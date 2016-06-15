@@ -30,7 +30,6 @@ function print_proxy_server ()
 			cecho "*** the proxy_server is " -bb -hl "[$http_proxy]" -d
 		fi
 	fi
-
 }
 
 function set_proxy ()
@@ -60,40 +59,31 @@ function unset_proxy ()
 function main ()
 {
 	# clear env
-
 	do_clear
 
 	# set LAN env
-
 	local PROXY_SERVER_IP="172.17.18.84"	# your proxy ip
-    local PROXY_SERVER_PORT="8080"		# your prxoy port
-    local PROXY_GATE=${PROXY_SERVER_IP}:${PROXY_SERVER_PORT}
+	local PROXY_SERVER_PORT="8080"		# your prxoy port
+	local PROXY_GATE=${PROXY_SERVER_IP}:${PROXY_SERVER_PORT}
 
 	# set path
-
 	local CUR_DIR='/tmp/smartswitcher'
 
-
 	# routine
-
-    echo "***************smart proxy switcher****************"
+	echo "***************smart proxy switcher****************"
 	print_proxy_server
 
 	# am I in LAN now ?
-
-    ping -c1 -W1 $PROXY_SERVER_IP &> /dev/null
-    if [ $? -eq 0 ]
-    then
-
+	ping -c1 -W1 $PROXY_SERVER_IP &> /dev/null
+	if [ $? -eq 0 ]
+	then
 		# build tmp path
-
 		if [ ! -e $CUR_DIR ]
 		then
 			mkdir $CUR_DIR
 		fi
 
 		# for ssh protocol proxy
-
 		#local GIT_PROXY_SSH=$CUR_DIR"/proxy4ssh."$(id -u)
 		local GIT_PROXY_SSH=$CUR_DIR"/proxy4ssh"
 		if [ ! -e $GIT_PROXY_SSH ]
@@ -104,7 +94,6 @@ function main ()
 		fi
 
 		# for git protocol prxoy
-
 		#local GIT_PROXY_WRAP=$CUR_DIR"/proxywrapper."$(id -u)
 		local GIT_PROXY_WRAP=$CUR_DIR"/proxywrapper"
 		if [ ! -e $GIT_PROXY_WRAP ]
@@ -115,30 +104,28 @@ function main ()
 		fi
 
 		# install
-
 		if [ -z "$CECHO_IS_IMPORTED" ]
 		then
 			echo "*** setting proxy env..."
 		else
 			cecho "*** setting " -b -hl "proxy" -d " env..."
 		fi
-        set_proxy $PROXY_GATE $GIT_PROXY_WRAP $GIT_PROXY_SSH
+		set_proxy $PROXY_GATE $GIT_PROXY_WRAP $GIT_PROXY_SSH
 
     else
 
 		# uninstall
-
 		if [ -z "$CECHO_IS_IMPORTED" ]
 		then
 			echo "*** setting no-proxy env..."
 		else
 			cecho "*** setting " -b -hl "no-proxy" -d " env..."
 		fi
-	    unset_proxy
-    fi
+		unset_proxy
+	fi
 
 	print_proxy_server
-    echo "***************************************************"
+	echo "***************************************************"
 }
 
 main
