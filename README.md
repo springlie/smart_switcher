@@ -28,14 +28,24 @@ Simply source it in your .zshrc, or any shell script resource file like this:
 
 Normally, it antomatically executes when you login in.
 
+## What's more ##
+
+#### cecho ####
+
 `smart_switcher` supports [**cecho**](https://github.com/springlie/cecho), who will bring you some colors.
+
+#### connect ####
 
 [**connect**](https://bitbucket.org/gotoh/connect/src/) is required if proxy is supported in **ssh** and **git**. 
 
--	[MAC user]
+ensure proxy be set temply for installation :) 
+
+`export http_proxy={YOUR_PROXY_GATEWARY_IP}:{YOUR_PROXY_GATEWAY_PORT}`
+
+- [**for MAC user only**]
 
 	brew install connect
 
--	[general]
+- [**for general user**]
 
 	download the source, make and install it easily in system path
