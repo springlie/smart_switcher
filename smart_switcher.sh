@@ -1,9 +1,9 @@
 #! /bin/sh
-# usage: set proxy_server automatically
+# usage: set proxy_server automatically, if you set your proxy info in gateway.ini
 
 do_clear ()
 {
-	command unalias unalias &>/dev/null
+	command unalias unalias	&>/dev/null
 	unalias clear			&>/dev/null
 	unalias source			&>/dev/null
 	unalias echo			&>/dev/null
