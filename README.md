@@ -20,13 +20,13 @@ Tested in [**Zsh**](http://www.zsh.org/) and [**Bash**](http://www.gnu.org/softw
 
 Simply source it in your .zshrc, or any shell script resource file like this:
 
-`source /path/to/smart_switcher.sh`
+`SMART_SWITCHER_DIR=/path/to/smart_switcher; source $SMART_SWITCHER_DIR/smart_switcher.sh`
 
-**and**, make sure set your proxy_server/gateway in `smart_switcher.sh`.
+**and**, make sure set your proxy_server/gateway in `$SMART_SWITCHER_DIR/gateway.ini`.
 
 ## Usage ##
 
-Normally, it antomatically executes when you login in.
+Normally, it antomatically executes when you login in
 
 ## What's more ##
 
