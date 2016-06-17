@@ -1,6 +1,6 @@
 # smart_switcher #
 
-A auto-detect proxy switcher fot http, https, ftp, rsync, ssh, git protocols.
+Auto-detect proxy switcher in terminal for http, https, ftp, rsync, git protocols. It supports many tools such as wget, yum, portage, brew ...
 
 ----------
 
@@ -53,3 +53,11 @@ ensure proxy be set temply for installation :)
 - [**for general user**]
 
 	download the source, make and install it easily in system path
+
+## TODO ##
+
+- add protocol header before proxy gateway
+- add username & password
+- add proxy for npm
+- add toggle function
+- add proxy for npm
