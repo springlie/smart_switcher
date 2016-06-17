@@ -60,4 +60,3 @@ ensure proxy be set temply for installation :)
 - add username & password
 - add proxy for npm
 - add toggle function
-- add proxy for npm
