@@ -1,5 +1,5 @@
 #! /bin/sh
-# usage: set proxy_server automatically
+# usage: set proxy_server automatically, if you set your proxy info in gateway.ini
 
 do_clear ()
 {
