@@ -56,7 +56,7 @@ ensure proxy be set temply for installation :)
 
 ## TODO ##
 
-- [] add protocol header before proxy gateway
-- [] add username & password
-- [] add proxy for npm
-- [] add toggle function
+- [ ] add protocol header before proxy gateway
+- [ ] add username & password
+- [ ] add proxy for npm
+- [ ] add toggle function
