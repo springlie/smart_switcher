@@ -1,36 +1,69 @@
 # smart_switcher #
 
-Auto-detect proxy switcher in terminal for http, https, ftp, rsync, git protocols. It supports many tools such as wget, yum, portage, brew ...
+Auto-detect proxy switcher in terminal. It supports many protocols and tools.
 
 ----------
 
 ## Overview ##
 
-A **smart** proxy switcher wrapper, supports **http**, **https**, **ftp**, **rsync**, **ssh**([**connect**](https://bitbucket.org/gotoh/connect/src/) depended), **git**([**connect**](https://bitbucket.org/gotoh/connect/src/) depended) protocols. It can automatically detect your network environment and set proxy for you. It supports multi-proxies.
+A **smart** proxy switcher wrapper, supports **http**, **https**, **ftp**, **rsync**, **ssh**([**connect**](https://bitbucket.org/gotoh/connect/src/) depended), **git**([**connect**](https://bitbucket.org/gotoh/connect/src/) depended) protocols.
 
-If you usually switch the network environment (maybe home with no-proxy and workplace with proxy), it may help you a lot.
+It can **automatically** detect your network environment (in preset set) and fit proxy for you.
 
-Tested in [**Zsh**](http://www.zsh.org/) and [**Bash**](http://www.gnu.org/software/bash/).
+It supports **multi-proxies**.
 
-## Screenshot ##
+If you usually switch the network environment (maybe home with no-proxy, workplace1 with proxy1, workplace2 with proxy2), it may help you a lot.
+
+Tested in [**Zsh**](http://www.zsh.org/) and [**Bash**](http://www.gnu.org/software/bash/) on Linux and Mac.
 
 ![screenshot](https://raw.github.com/springlie/smart_switcher/master/screenshot.png)
 
-## Install ##
+### Protocols supported ###
 
-Simply source it in your .zshrc, or any shell script resource file like this:
+- [x] http
 
-`SMART_SWITCHER_DIR=/path/to/smart_switcher; source $SMART_SWITCHER_DIR/smart_switcher.sh`
+- [x] https
 
-**and**, make sure set your proxy host/port in `$SMART_SWITCHER_DIR/gateway.ini`.
+- [x] ftp
+
+- [x] rsync
+
+- [x] ssh
+
+- [x] git
+
+### Tools supported ###
+
+- [x] wget
+
+- [x] yum
+
+- [x] brew
+
+- [x] portage
+
+- [ ] npm
+
+## Installation ##
+
+1. Download script (temply set your https proxy if necessary for installation)
+
+> export https_proxy={YOUR_PROXY_GATEWARY_IP}:{YOUR_PROXY_GATEWAY_PORT}
+> git clone ource https://github.com/springlie/smart_switcher.git /path/to/smart_switcher
+
+2. Set proxies host/port in `$SMART_SWITCHER_DIR/gateway.ini`.
+
+[optional] Follow `gateway.ini` format and customize your multiple proxies.
+
+[optional] Note: the most common proxies should be set first in the value of "gateways"
+
+3. Source it in your `.zshrc` (or any shell script resource file like `.bashrc`):
+
+> SMART_SWITCHER_DIR=/path/to/smart_switcher; source $SMART_SWITCHER_DIR/smart_switcher.sh
 
 ## Usage ##
 
-Normally, it antomatically executes when you login in.
-
-You can follow `gateway.ini` format and customize your multiple proxies.
-
-Note: the most common proxies should be set first in the value of "gateways"
+Execute antomatically when user login.
 
 ## What's more ##
 
@@ -40,19 +73,25 @@ Note: the most common proxies should be set first in the value of "gateways"
 
 #### connect ####
 
-[**connect**](https://bitbucket.org/gotoh/connect/src/) is required if proxy is supported in **ssh** and **git**. 
+[**connect**](https://bitbucket.org/gotoh/connect/src/) is required to support **ssh** and **git** protocols. 
 
-ensure proxy be set temply for installation :) 
+1. Ensure proxy be set temply for installation ... 
 
-`export http_proxy={YOUR_PROXY_GATEWARY_IP}:{YOUR_PROXY_GATEWAY_PORT}`
+> export http_proxy={YOUR_PROXY_GATEWARY_IP}:{YOUR_PROXY_GATEWAY_PORT}
 
-- [**for MAC user only**]
+2. 
 
-	brew install connect
+- [**for Mac**]
 
-- [**for general user**]
+> brew install connect
 
-	download the source, make and install it easily in system path
+- [**for Gentoo**]
+
+> emerge net-misc/connect
+
+- [**for other**]
+
+	download the [source](https://bitbucket.org/gotoh/connect/src/), make and install it easily in system path
 
 ## TODO ##
 
@@ -60,3 +99,4 @@ ensure proxy be set temply for installation :)
 - [ ] add username & password
 - [ ] add proxy for npm
 - [ ] add toggle function
+- [ ] specified ssh rule for sites
