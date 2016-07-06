@@ -3,7 +3,7 @@
 
 do_clear ()
 {
-	command unalias unalias &>/dev/null
+	command unalias unalias	&>/dev/null
 	unalias clear			&>/dev/null
 	unalias source			&>/dev/null
 	unalias echo			&>/dev/null

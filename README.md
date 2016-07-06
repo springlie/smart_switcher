@@ -46,18 +46,19 @@ Tested in [**Zsh**](http://www.zsh.org/) and [**Bash**](http://www.gnu.org/softw
 
 ## Installation ##
 
-1. Download script (temply set your https proxy if necessary for installation)
+- Download script (temply set your https proxy if necessary for installation)
 
 > export https_proxy={YOUR_PROXY_GATEWARY_IP}:{YOUR_PROXY_GATEWAY_PORT}
-> git clone ource https://github.com/springlie/smart_switcher.git /path/to/smart_switcher
+>
+> git clone https://github.com/springlie/smart_switcher.git /path/to/smart_switcher
 
-2. Set proxies host/port in `$SMART_SWITCHER_DIR/gateway.ini`.
+- Set proxies host/port in `$SMART_SWITCHER_DIR/gateway.ini`.
 
-[optional] Follow `gateway.ini` format and customize your multiple proxies.
+	[optional] Follow `gateway.ini` format and customize your multiple proxies.
 
-[optional] Note: the most common proxies should be set first in the value of "gateways"
+	[optional] Note: the most common proxies should be set first in the value of "gateways"
 
-3. Source it in your `.zshrc` (or any shell script resource file like `.bashrc`):
+- Source it in your `.zshrc` (or any shell script resource file like `.bashrc`):
 
 > SMART_SWITCHER_DIR=/path/to/smart_switcher; source $SMART_SWITCHER_DIR/smart_switcher.sh
 
@@ -75,11 +76,10 @@ Execute antomatically when user login.
 
 [**connect**](https://bitbucket.org/gotoh/connect/src/) is required to support **ssh** and **git** protocols. 
 
-1. Ensure proxy be set temply for installation ... 
+Ensure proxy be set temply for installation ... 
 
 > export http_proxy={YOUR_PROXY_GATEWARY_IP}:{YOUR_PROXY_GATEWAY_PORT}
 
-2. 
 
 - [**for Mac**]
 
