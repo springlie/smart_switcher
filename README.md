@@ -36,13 +36,29 @@ Tested in [**Zsh**](http://www.zsh.org/) and [**Bash**](http://www.gnu.org/softw
 
 - [x] wget
 
+- [x] ftp
+
+- [x] rsync
+
 - [x] yum
 
 - [x] brew
 
-- [x] portage
+- [x] emerge
 
-- [ ] npm
+- [x] npm
+
+- [x] pip
+
+- [x] gopkg
+
+- [x] git
+
+- [x] hg
+
+- [ ] svn
+
+- [ ] ~~cvs~~
 
 ## Installation ##
 
@@ -60,7 +76,7 @@ Tested in [**Zsh**](http://www.zsh.org/) and [**Bash**](http://www.gnu.org/softw
 
 - Source it in your `.zshrc` (or any shell script resource file like `.bashrc`):
 
-> SMART_SWITCHER_DIR=/path/to/smart_switcher; source $SMART_SWITCHER_DIR/smart_switcher.sh
+> export SMART_SWITCHER_DIR=/path/to/smart_switcher; source $SMART_SWITCHER_DIR/smart_switcher.sh
 
 ## Usage ##
 
@@ -80,7 +96,6 @@ Ensure proxy be set temply for installation ...
 
 > export http_proxy={YOUR_PROXY_GATEWARY_IP}:{YOUR_PROXY_GATEWAY_PORT}
 
-
 - [**for Mac**]
 
 > brew install connect
@@ -93,10 +108,18 @@ Ensure proxy be set temply for installation ...
 
 	download the [source](https://bitbucket.org/gotoh/connect/src/), make and install it easily in system path
 
+## Known issues
+
+1. When $SHLVL > 1 (means in multi-layers sub-shell), the proxy setting is invalid
+
+2. ssh can't distinguishes the destination sites before or behind proxy gateway
+
 ## TODO ##
 
-- [ ] add protocol header before proxy gateway
-- [ ] add username & password
-- [ ] add proxy for npm
+- [x] add protocol header before proxy gateway
+- [x] add username & password
+- [x] add proxy for npm
 - [ ] add toggle function
 - [ ] specified ssh rule for sites
+- [ ] add proxy for svn
+
