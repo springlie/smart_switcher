@@ -31,6 +31,7 @@ get_info ()
 check_valid_gateway ()
 {
 	local GATEWAY_NAME_ARRAY=
+	local REAL_GATEWAY_NAME_ARRAY=
 	local VALID_GATEWAY=
 	local GATEWAY_HEADER=
 	local GATEWAY_USER=
@@ -43,7 +44,7 @@ check_valid_gateway ()
 	GATEWAY_NAME_ARRAY=$(get_info ALL gateways)
 
 	# traverse gateway array & try to find a valid gateway
-	for GATEWAY_NAME in ${GATEWAY_NAME_ARRAY[@]}
+	for GATEWAY_NAME in ${=GATEWAY_NAME_ARRAY[@]}
 	do
 		GATEWAY_HEADER=$(get_info "$GATEWAY_NAME" header)
 		GATEWAY_USER=$(get_info "$GATEWAY_NAME" user)
