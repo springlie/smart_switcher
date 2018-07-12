@@ -82,6 +82,8 @@ Tested in [**Zsh**](http://www.zsh.org/) and [**Bash**](http://www.gnu.org/softw
 
 Execute antomatically when user login.
 
+Use command `sm_toggle` to toggle proxy status when you want.
+
 ## What's more ##
 
 #### cecho ####
@@ -119,7 +121,8 @@ Ensure proxy be set temply for installation ...
 - [x] add protocol header before proxy gateway
 - [x] add username & password
 - [x] add proxy for npm
-- [ ] add toggle function
+- [x] add toggle function
 - [ ] specified ssh rule for sites
 - [ ] add proxy for svn
+- [ ] add automatical setup for **connect** package
 
